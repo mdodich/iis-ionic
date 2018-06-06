@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Astronauts
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let astronaut of astronauts">
+      {{astronaut.name}}
+      <ion-img item-start src="{{astronaut.img}}"></ion-img>
+    </ion-item>
+  </ion-list>
+</ion-content>

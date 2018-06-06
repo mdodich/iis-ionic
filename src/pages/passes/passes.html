@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Passes
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-list-header *ngIf="(passes && location)">The next {{passes.length}} passes for {{location}}</ion-list-header>
+      <ion-item *ngFor="let pass of passes">
+        <!-- At {{pass.risetime | date:'H:mm, EEEE, MMMM d' }} for {{pass.duration}} seconds -->
+        {{pass.risetime | todayOrTomorrow }} at {{pass.risetime | date:'shortTime' }} for {{pass.duration | secondsToMinutes}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  

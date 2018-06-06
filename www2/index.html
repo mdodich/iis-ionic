@@ -17,12 +17,21 @@
 
   <!-- cordova.js required for cordova apps (remove if not needed) -->
   <script src="cordova.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?client=gme-americanautomobile&channel=dodich"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?client=gme-americanautomobile&channel=dodich"></script> -->
+
+  <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+    }
+  </script>-->
 
   <link href="build/main.css" rel="stylesheet">
 
 </head>
-  <!-- <script>
+  <script>
     var script = document.createElement("script");
     script.type = "text/javascript";
     script.src = "https://maps.googleapis.com/maps/api/js?client=gme-americanautomobile&channel=dodich&callback=init";
@@ -32,7 +41,7 @@
     function init() {
       console.log(google.maps.version.toString());
     }
-  </script> -->
+  </script>
 <body>
 
   <!-- <script src="https://maps.googleapis.com/maps/api/js?client=gme-americanautomobile&channel=dodich"></script> -->
